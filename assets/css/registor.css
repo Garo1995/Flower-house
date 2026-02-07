@@ -1,0 +1,283 @@
+.fone__entrance{
+    background: #E93F32;
+    width: 100%;
+    height: 69px;
+}
+.entrance__main{
+    margin-top: 32px;
+    padding-bottom: 110px;
+}
+.entrance__main:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/Elli8566.png");
+    background-repeat: no-repeat;
+    max-width: 475px;
+    width: 100%;
+    height: 474px;
+    z-index: -1;
+}
+.entrance__main:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/Vec4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 356px;
+    width: 100%;
+    height: 677px;
+    z-index: -1;
+}
+.entrance__close{
+    display: flex;
+    justify-content: center;
+}
+.entrance__close a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entrance__close a img{
+    margin-bottom: 12px;
+    transform: rotate(-180deg);
+}
+.entrance__form{
+    margin: 120px 0 0;
+}
+.entrance__form h2{
+    text-align: center;
+}
+.entrance__cnt{
+    max-width: 502px;
+    width: 100%;
+    margin: 0 auto;
+}
+.entrance__inp {
+    width: 100%;
+    margin-top: 24px;
+}
+.entrance__inp span {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    display: block;
+    margin-bottom: 12px;
+    position: relative;
+    width: max-content;
+}
+.for__stars:after{
+    content: "*";
+    position: absolute;
+    top: -2px;
+    right: -9px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EE0000;
+}
+.entrance__inp label{
+    width: 100%;
+    display: flex;
+}
+.entrance__inp label input{
+    width: 100%;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    padding: 2px 15px;
+}
+.entrance__btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.entrance__regs{
+    text-align: center;
+    margin-top: 10px;
+}
+.entrance__account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.entrance__account p{
+    margin-right: 4px;
+}
+.entrance__regs a{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-align: center;
+    display: block;
+}
+.entrance__regs>a{
+    margin-top: 25px;
+}
+.new__pass{
+    display: flex;
+    align-items: center;
+}
+.new__pass p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #E93F32;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.entrance__registration a{
+    display: flex;
+    align-items: center;
+}
+.entrance__registration a strong{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000000;
+}
+.entrance__registration a img{
+    margin-right: 29px;
+    width: 14px;
+}
+.entrance__cnt .ption-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.entrance__cnt .checkcontainer{
+    padding-left: 35px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+}
+.entrance__text{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.entrance__text p{
+    margin-bottom: 20px;
+}
+.code__letter .entrance__cnt>strong{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #333333;
+    display: block;
+}
+.code__letter .entrance__inp {
+    max-width: 212px;
+    margin: 34px auto 0;
+}
+.code__letter .entrance__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.code__letter .entrance__btn button{
+    max-width: 212px;
+    width: 100%;
+}
+.entrance__btn .btn__liner{
+    margin-top: 20px;
+}
+.entrance__registration{
+    margin-top: 15px;
+}
+@media (max-width: 1299px){
+    .entrance__main:before {
+        background-size: contain;
+        max-width: 343px;
+        height: 338px;
+    }
+    .entrance__main:after {
+        max-width: 283px;
+        height: 543px;
+    }
+}
+@media (max-width: 991px){
+    .entrance__form {
+        margin: 100px auto 0;
+    }
+    .entrance__main {
+        padding-bottom: 50px;
+    }
+    .entrance__registration a strong {
+        font-size: 34px;
+        line-height: 41px;
+    }
+    .entrance__main:before {
+        display: none;
+    }
+    .entrance__main:after {
+        display: none;
+
+    }
+}
+@media (max-width: 760px){
+    .entrance__form {
+        margin: 50px auto 0;
+    }
+    .entrance__inp {
+        margin-top: 25px;
+    }
+    .entrance__inp span {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .entrance__btn {
+        margin-top: 30px;
+    }
+    .entrance__account {
+        margin-top: 20px;
+    }
+    .entrance__registration a img {
+        margin-right: 16px;
+        width: 12px;
+    }
+    .entrance__cnt .ption-info {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 570px){
+    .entrance__registration a strong {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .entrance__inp {
+        margin-top: 15px;
+    }
+    .entrance__form {
+        margin: 40px auto 0;
+    }
+    .entrance__main {
+        padding-bottom: 40px;
+    }
+    .entrance__inp span {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .entrance__btn {
+        margin-top: 20px;
+    }
+}

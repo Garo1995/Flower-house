@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .modal-reg {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-reg .open_modal {
+        color: #FFFFFF;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background: #E93F32;
+
+    }
+</style>
+<body>
+<header></header>
+<div class="modal-reg">
+    <button data-val="modal" class="open_modal">Заказать звонок</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <h2>Заказать звонок</h2>
+                <div class="entrance__cnt">
+                    <div class="entrance__inp">
+                        <span>Ваше имя:</span>
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <div class="entrance__inp">
+                        <span>Телефон:</span>
+                        <label>
+                            <input type="text" pattern="\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}" class="phone" placeholder="+ 7  (___) ___-__-__">
+                        </label>
+                    </div>
+                    <div class="ption-info">
+                        <label class="checkcontainer">Я даю свое согласие на обработку моих персональных данных
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="modal__btn">
+                        <button class="btn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="request" class="open_modal">Запрос отправлен</button>
+    <div id="request" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <div class="modal__cnt">
+                    <h3>Ваш запрос отправлен</h3>
+                    <div class="modal__icon">
+                        <img src="assets/img/checkmark.svg" alt="">
+                    </div>
+                       <strong>Наш менеджер скоро позвонит вам!</strong>
+                    <div class="modal__btn">
+                        <button class="btn">Отлично!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="unsubscribe" class="open_modal">Ваш заказ принят!</button>
+    <div id="unsubscribe" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <div class="modal__profile">
+                    <h3>Вы уверены, что хотите отписаться от новостей?</h3>
+
+                    <div class="modal__icon">
+                        <img src="assets/img/news.svg" alt="">
+                    </div>
+                    <p>Вам больше не будет поступать информация о свежих новостях и акциях.</p>
+                    <div class="modal__btn">
+                        <button class="btn">Отписаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="sorry" class="open_modal">Подписаться</button>
+    <div id="sorry" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <div class="modal__profile">
+                    <h3>Нам очень жаль,
+                        что вы отписались...</h3>
+                    <div class="modal__icon">
+                        <img src="assets/img/smile.svg" alt="">
+                    </div>
+
+                    <p>Вам больше не будет поступать информация о свежих новостях и акциях.</p>
+                    <div class="modal__btn">
+                        <button class="btn__liner">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="completed" class="open_modal">Отлично</button>
+    <div id="completed" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <div class="modal__profile">
+                    <h3>Подписка успешно оформлена!</h3>
+
+                    <div class="modal__icon">
+                        <img src="assets/img/heppy.svg" alt="">
+                    </div>
+                    <p>Теперь вы будете получать свежую информацию о новостях и акциях.</p>
+                    <div class="modal__btn">
+                        <button class="btn">Отлично!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="accepted" class="open_modal">Ваш заказ принят!</button>
+    <div id="accepted" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <div class="modal__cnt">
+                    <h3>Ваш заказ принят</h3>
+                    <div class="modal__icon">
+                        <img src="assets/img/checkmark.svg" alt="">
+                    </div>
+                    <strong>На телефон вам поступит информация со статусом заказа.</strong>
+                    <div class="modal__btn">
+                        <button class="btn">Отлично!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button data-val="postcard" class="open_modal">Сохранить открытку</button>
+    <div id="postcard" class="modal">
+        <div class="modal-content">
+            <div class="modal-registration">
+                <div class="close"></div>
+                <form>
+                    <div class="enter__postcard">
+                        <strong>Введите текст открытки:</strong>
+                        <div class="postcard__textarea">
+                            <label>
+                                <textarea placeholder="Текст открытки..."></textarea>
+                            </label>
+                        </div>
+                        <div class="modal__btn">
+                            <button class="btn">Сохранить открытку</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+    <button data-val="entrance" class="open_modal">Вход</button>
+    <div id="entrance" class="modal">
+        <div class="modal-content">
+            <div class="new__regs">
+                <div class="fone__entrance"></div>
+                <div class="entrance__main">
+                    <div class="entrance__block">
+                        <div class="entrance__close">
+                            <a href="#" class="entrance__close__mod">
+                                <img src="assets/img/arrow.svg" alt="">
+                                <span>Закрыть</span>
+                            </a>
+                        </div>
+                        <div class="entrance__form">
+                            <h2>Вход</h2>
+                            <form>
+                                <div class="entrance__cnt">
+                                    <div class="entrance__inp">
+                                        <span>Почта:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <span>Пароль:</span>
+                                        <label>
+                                            <input type="password">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__btn">
+                                        <button class="btn">Войти</button>
+                                    </div>
+                                    <div class="entrance__regs">
+                                        <div class="entrance__account">
+                                            <p>Нет аккаунта?</p>
+                                            <a href="#"> — зарегистрируйтесь</a>
+                                        </div>
+                                        <a href="#"> Забыли пароль?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button data-val="registration" class="open_modal">Регистрация</button>
+    <div id="registration" class="modal">
+        <div class="modal-content">
+            <div class="new__regs">
+                <div class="fone__entrance"></div>
+                <div class="entrance__main">
+                    <div class="entrance__block">
+                        <div class="entrance__close">
+                            <a href="#" class="entrance__close__mod">
+                                <img src="assets/img/arrow.svg" alt="">
+                                <span>Закрыть</span>
+                            </a>
+                        </div>
+                        <div class="entrance__form">
+                            <h2>Регистрация</h2>
+                            <form>
+                                <div class="entrance__cnt">
+                                    <div class="entrance__inp">
+                                        <span class="for__stars">Имя:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <span class="for__stars">Фамилия:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <span class="for__stars">Телефон:</span>
+                                        <label>
+                                            <input type="text" pattern="\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}" class="phone">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <span class="for__stars">Город:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <span>Адрес доставки:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="ption-info">
+                                        <label class="checkcontainer">Я даю свое согласие на обработку моих персональных данных
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="entrance__btn">
+                                        <button class="btn">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button data-val="code-letter" class="open_modal">Код из письма</button>
+    <div id="code-letter" class="modal">
+        <div class="modal-content">
+            <div class="new__regs code__letter">
+                <div class="fone__entrance"></div>
+                <div class="entrance__main">
+                    <div class="entrance__block">
+                        <div class="entrance__close">
+                            <a href="#" class="entrance__close__mod">
+                                <img src="assets/img/arrow.svg" alt="">
+                                <span>Закрыть</span>
+                            </a>
+                        </div>
+                        <div class="entrance__form">
+                            <div class="entrance__text">
+                                <p>
+                                    Вам на почту был отправлен код для подтверждения регистрации.
+                                </p>
+                                <p>
+                                    Пожалуйста введите код или перейдите по ссылке из письма,
+                                    для подтверждения адреса.
+                                </p>
+                            </div>
+                            <form>
+                                <div class="entrance__cnt">
+                                    <strong>Код из письма:</strong>
+                                    <div class="entrance__inp">
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__btn">
+                                        <button class="btn">Проверить почту</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button data-val="entrance-two" class="open_modal">Вход</button>
+    <div id="entrance-two" class="modal">
+        <div class="modal-content">
+            <div class="new__regs">
+                <div class="fone__entrance"></div>
+                <div class="entrance__main">
+                    <div class="entrance__block">
+                        <div class="entrance__close">
+                            <a href="#" class="entrance__close__mod">
+                                <img src="assets/img/arrow.svg" alt="">
+                                <span>Закрыть</span>
+                            </a>
+                        </div>
+                        <div class="entrance__form">
+                            <h2>Вход</h2>
+                            <form>
+                                <div class="entrance__cnt">
+                                    <div class="entrance__inp">
+                                        <span>Почта:</span>
+                                        <label>
+                                            <input type="text">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__inp">
+                                        <div class="new__pass">
+                                            <span>Пароль:</span>
+                                            <p>
+                                                Неверный пароль. Попробуйте еще раз.
+                                            </p>
+                                        </div>
+                                        <label>
+                                            <input type="password">
+                                        </label>
+                                    </div>
+                                    <div class="entrance__btn">
+                                        <button class="btn">Войти</button>
+                                    </div>
+                                    <div class="entrance__regs">
+                                        <div class="entrance__account">
+                                            <p>Нет аккаунта?</p>
+                                            <a href="#"> — зарегистрируйтесь</a>
+                                        </div>
+                                        <a href="#"> Забыли пароль?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/jquery.formstyler.min.js"></script>
+<script src="assets/js/nouislider.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.mask.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
